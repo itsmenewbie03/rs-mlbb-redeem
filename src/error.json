@@ -1,0 +1,110 @@
+[
+  {
+    "code": 0,
+    "lang": "Redeemed Successfully!"
+  },
+  {
+    "code": -302,
+    "lang": "The CDKey does not exist. (-302)"
+  },
+  {
+    "code": 1401,
+    "lang": "This CDKey is configured for a different Server. (1401)"
+  },
+  {
+    "code": 1402,
+    "lang": "This CDKey is incorrect. Please try again. (1402)"
+  },
+  {
+    "code": 1403,
+    "lang": "The CDKey expired. (1403)"
+  },
+  {
+    "code": 1404,
+    "lang": "Incorrect CDKey format. (1404)"
+  },
+  {
+    "code": 1405,
+    "lang": "This CDKey has been redeemed. (1405)"
+  },
+  {
+    "code": 1406,
+    "lang": "This CDKey has been linked to another account. Please enter the correct account. (1406)"
+  },
+  {
+    "code": 1407,
+    "lang": "Exceeds CDKey exchange amount limit. (1407)"
+  },
+  {
+    "code": 1408,
+    "lang": "This CDKey is configured for a different Server. (1408)"
+  },
+  {
+    "code": 1409,
+    "lang": "CDKey Configuration Error (1409)"
+  },
+  {
+    "code": 1410,
+    "lang": "You have already redeemed this offer. (1410)"
+  },
+  {
+    "code": 1411,
+    "lang": "The exchange has not started for this CDKey. (1411)"
+  },
+  {
+    "code": 1412,
+    "lang": "Limit reached for the number of people exchanging. (1412)"
+  },
+  {
+    "code": 1413,
+    "lang": "This CDKey is configured for new users. (1413)"
+  },
+  {
+    "code": 1414,
+    "lang": "Only users who have recharged in the game can redeem this CDKey. (1414)"
+  },
+  {
+    "code": 1415,
+    "lang": "Your level is too high to redeem this CDKey. (1415)"
+  },
+  {
+    "code": 1416,
+    "lang": "The CDKey you entered is configured for a different channel. (1416)"
+  },
+  {
+    "code": 1417,
+    "lang": "Your profile has reached the maximum exchanges. (1417)"
+  },
+  {
+    "code": 1418,
+    "lang": "Limit reached for the number of exchanges. (1418)"
+  },
+  {
+    "code": 1419,
+    "lang": "The CDKey is configured for specific countries/regions. (1419)"
+  },
+  {
+    "code": 1420,
+    "lang": "This CDKey is configured for returning players. (1420)"
+  },
+  {
+    "code": -20009,
+    "lang": "Too many verification tempts. Please try again later. (-20009)"
+  },
+  {
+    "code": -20023,
+    "lang": "Invalid parameters. Please contact Customer Service. (-20023)"
+  },
+  {
+    "code": -20010,
+    "lang": "Illegal verification code. Exchange failed. (-20010)"
+  },
+  {
+    "code": -20028,
+    "lang": "The verification code has been sent. (-20028)"
+  },
+  {
+    "code": -20027,
+    "lang": "Too many attempts. Please try again later. (-20027)"
+  }
+]
