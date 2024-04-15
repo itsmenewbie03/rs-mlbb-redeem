@@ -21,6 +21,18 @@ pub struct VCodeResponse {
     pub message: String,
 }
 
+#[derive(Serialize, Deserialize)]
+pub struct CdkResponse {
+    pub status: String,
+    pub code: i32,
+    pub message: String,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+pub struct ErrorCode {
+    pub code: i32,
+    pub lang: String,
+}
 impl Translate for VCodeResponse {
     fn code_to_message(code: i32) -> String {
         match code {
@@ -52,6 +64,18 @@ impl Translate for VCodeResponse {
     }
 }
 
+impl Translate for CdkResponse {
+    fn code_to_message(code: i32) -> String {
+        let error_codes_json = include_str!("./error.json");
+        let error_codes: Vec<ErrorCode> = serde_json::from_str(error_codes_json).unwrap();
+        let possible_match = error_codes.iter().find(|x| x.code == code);
+        match possible_match {
+            None => format!("Unknown Error Code [{}]", code),
+            Some(known_error_code) => known_error_code.lang.to_owned(),
+        }
+    }
+}
+
 pub async fn send_vc(game_id: &str, server_id: &str) {
     let cli = Client::new();
     let url = "https://api.mobilelegends.com/mlweb/sendMail";
@@ -64,5 +88,6 @@ pub async fn send_vc(game_id: &str, server_id: &str) {
     let res = cli.post(url).json(&body).send().await.unwrap();
     let res_body = res.json::<VCodeResponse>().await.unwrap();
     let res_mgs = VCodeResponse::code_to_message(res_body.code);
-    println!("{}", res_mgs);
+    let cdk_res = CdkResponse::code_to_message(res_body.code);
+    println!("{}\n{}", res_mgs, cdk_res);
 }
